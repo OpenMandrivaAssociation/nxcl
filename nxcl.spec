@@ -1,6 +1,6 @@
 %define name    nxcl
 %define version 1
-%define release %mkrel 0.%revision.1
+%define release %mkrel 0.%revision.2
 %define revision 438
 
 %define __libtoolize    /bin/true
@@ -15,7 +15,7 @@ Group:         Graphical desktop/KDE
 Source:        %{name}-0-svn%{revision}.tar.bz2
 Patch0:		nxcl-fixdocdir.patch
 BuildRoot:     %{_tmppath}/%{name}-%{version}
-BuildRequires: libX11-devel
+BuildRequires: libX11-devel dbus-devel
 
 %description
 A library for building NX clients
