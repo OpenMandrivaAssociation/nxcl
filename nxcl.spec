@@ -15,7 +15,7 @@ Group:         Graphical desktop/KDE
 Source:        %{name}-0-svn%{revision}.tar.bz2
 Patch0:		nxcl-fixdocdir.patch
 BuildRoot:     %{_tmppath}/%{name}-%{version}
-BuildRequires: devel(libX11)
+BuildRequires: libX11-devel
 
 %description
 A library for building NX clients
