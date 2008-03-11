@@ -1,7 +1,7 @@
 %define name    nxcl
-%define version 1
-%define release %mkrel 0.%revision.3
-%define revision 438
+%define version 0.9
+%define release %mkrel 0.%revision.1
+%define revision 519
 
 %define __libtoolize    /bin/true
 
@@ -12,7 +12,7 @@ Release:       %{release}
 License:       GPL
 Url:           http://freenx.berlios.de/
 Group:         Graphical desktop/KDE
-Source:        %{name}-0-svn%{revision}.tar.bz2
+Source:        %{name}-%{version}-svn%{revision}.tar.bz2
 Patch0:		nxcl-fixdocdir.patch
 BuildRoot:     %{_tmppath}/%{name}-%{version}
 BuildRequires: libx11-devel dbus-devel doxygen
