@@ -13,10 +13,10 @@ License:       GPL
 Url:           http://freenx.berlios.de/
 Group:         Graphical desktop/KDE
 Source:        %{name}-%{version}-svn%{revision}.tar.bz2
-Patch0:		nxcl-fixdocdir.patch
+Patch0:		   nxcl-fixdocdir.patch
 BuildRoot:     %{_tmppath}/%{name}-%{version}
 BuildRequires: libx11-devel dbus-devel doxygen
-Epoch:		0
+Epoch:		   1
 
 %description
 A library for building NX clients
