@@ -14,6 +14,7 @@ Url:           http://freenx.berlios.de/
 Group:         Graphical desktop/KDE
 Source:        %{name}-%{version}-svn%{revision}.tar.bz2
 Patch0:		   nxcl-fixdocdir.patch
+Patch1:        nxcl-fixbuild.patch
 BuildRoot:     %{_tmppath}/%{name}-%{version}
 BuildRequires: libx11-devel dbus-devel doxygen
 Epoch:		   1
@@ -24,6 +25,7 @@ A library for building NX clients
 %prep
 %setup -n %{name}
 %patch0 -p1 
+%patch1 -p1
 
 %build
 autoreconf -is
