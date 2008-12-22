@@ -1,7 +1,7 @@
 %define name    nxcl
 %define version 0.9
-%define release %mkrel 0.%revision.2
-%define revision 519
+%define release %mkrel 0.%revision.3
+%define revision 631
 
 %define __libtoolize    /bin/true
 
@@ -24,7 +24,7 @@ A library for building NX clients
 
 %prep
 %setup -n %{name}
-%patch0 -p1 
+#%patch0 -p1 
 %patch1 -p1
 
 %build
