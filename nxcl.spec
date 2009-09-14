@@ -1,6 +1,6 @@
 %define name    nxcl
 %define version 0.9
-%define release %mkrel 0.%revision.3
+%define release %mkrel 0.%revision.4
 %define revision 631
 
 %define __libtoolize    /bin/true
