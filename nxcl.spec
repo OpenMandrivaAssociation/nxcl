@@ -12,11 +12,13 @@ Release:       %{release}
 License:       GPL
 Url:           http://freenx.berlios.de/
 Group:         Graphical desktop/KDE
-Source:        %{name}-%{version}-svn%{revision}.tar.bz2
+Source0:        %{name}-%{version}-svn%{revision}.tar.bz2
 Patch0:		   nxcl-fixdocdir.patch
 Patch1:        nxcl-fixbuild.patch
-BuildRoot:     %{_tmppath}/%{name}-%{version}
-BuildRequires: libx11-devel dbus-devel doxygen
+Patch2:		nxcl-gcc47.patch
+BuildRequires: pkgconfig(dbus-1)
+BuildRequires: pkgconfig(x11)
+BuildRequires: doxygen
 Epoch:		   1
 
 %description
@@ -26,28 +28,26 @@ A library for building NX clients
 %setup -n %{name}
 #%patch0 -p1 
 %patch1 -p1
+%patch2 -p0
 
 %build
+sed -i -e "s#1.0#0.9#" configure.ac || die "version sed failed"
+
+
 autoreconf -is
 %configure
 
 %make
 
 %install
-rm -Rf %{buildroot}
 %makeinstall
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %files
-%defattr(-,root,root)
 %{_bindir}/libtest
 %{_bindir}/notQttest
 %{_bindir}/nxcl
 %{_bindir}/nxcmd
 %{_libdir}/lib*nxcl*
 %{_libdir}/pkgconfig/nxcl.pc
-%{_includedir}/nxcl
 %{_includedir}/nxcl/*
 %{_docdir}/nxcl*
