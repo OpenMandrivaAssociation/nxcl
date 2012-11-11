@@ -1,0 +1,33 @@
+--- nxcl/lib/nxclientlib.cpp~	2008-03-11 14:48:34.000000000 +0100
++++ nxcl/lib/nxclientlib.cpp	2008-10-25 00:16:24.000000000 +0200
+@@ -23,6 +23,10 @@
+ #include "nxclientlib_i18n.h"
+ #include "nxclientlib.h"
+ #include "nxdata.h"
++#include <stdlib.h>
++#include <string.h>
++
++
+ 
+ #include "../config.h"
+ 
+--- nxcl/lib/notQt.cpp~	2008-03-11 14:48:34.000000000 +0100
++++ nxcl/lib/notQt.cpp	2008-10-25 00:17:54.000000000 +0200
+@@ -31,6 +31,7 @@
+ 
+ #include "../config.h"
+ #include "notQt.h"
++#include <stdlib.h>
+ 
+ using namespace std;
+ using namespace nxcl;
+--- nxcl/nxcl/nxcl.cpp~	2008-03-11 14:48:34.000000000 +0100
++++ nxcl/nxcl/nxcl.cpp	2008-10-25 00:21:39.000000000 +0200
+@@ -20,6 +20,7 @@
+ #include "nxclientlib_i18n.h"
+ #include "nxclientlib.h"
+ #include <fstream>
++#include <stdlib.h>
+ 
+ #include "nxcl.h"
+ 

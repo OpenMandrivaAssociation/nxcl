@@ -1,0 +1,12 @@
+diff -BrauN nxcl.orig/doc/Makefile.am nxcl/doc/Makefile.am
+--- nxcl.orig/doc/Makefile.am	2008-01-28 09:14:10.000000000 +0000
++++ nxcl/doc/Makefile.am	2008-01-28 13:52:52.000000000 +0000
+@@ -2,7 +2,7 @@
+ 
+ DOXYFILE = Doxyfile
+ 
+-docdir = $(prefix)/doc/$(PACKAGE)-$(VERSION)
++docdir = $(datarootdir)/doc/$(PACKAGE)-$(VERSION)
+ 
+ EXTRA_DIST = html
+ 
