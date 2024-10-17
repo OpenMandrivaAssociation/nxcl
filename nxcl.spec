@@ -10,7 +10,7 @@ Name:          %{name}
 Version:       %{version}
 Release:       %{release}
 License:       GPL
-Url:           http://freenx.berlios.de/
+Url:           https://freenx.berlios.de/
 Group:         Graphical desktop/KDE
 Source0:        %{name}-%{version}-svn%{revision}.tar.bz2
 Patch0:		   nxcl-fixdocdir.patch
